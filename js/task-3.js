@@ -1,24 +1,18 @@
-// function checkForSpam(message) {
-//     const spam1 = "spam";
-//     const spam2 = "sale";
+function filterArray(numbers, value) {
+    let array = [];
 
-//     const normMessage = message.toLowerCase();
-  
-//     if (normMessage.includes(spam1))
-//     {return true; }
+    for (let i = 0; i <= numbers.length; i++) {
+        if (numbers[i] > value) {
+      array.push(numbers[i]);}}
 
-//     else if(normMessage.includes(spam2))
-//         {return true; }
-//     else
-//    {return false}
-// }
-
-// console.log(checkForSpam("Latest technology news")); // false
-// console.log(checkForSpam("JavaScript weekly newsletter")); // false
-// console.log(checkForSpam("Get best sale offers now!")); // true
-// console.log(checkForSpam("Amazing SalE, only tonight!")); // true
-// console.log(checkForSpam("Trust me, this is not a spam message")); // true
-// console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!")); // true
-// console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
+    return array;
+}
 
 
+
+
+console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]  
